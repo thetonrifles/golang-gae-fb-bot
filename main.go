@@ -59,7 +59,6 @@ func PostWebHookHandler(w http.ResponseWriter, r *http.Request) {
 	sendMessage(r, data)
 }
 
-//func sendMessage(r *http.Request, sender int64, messageData string) {
 func sendMessage(r *http.Request, data PostRequestData) {
 	context := appengine.NewContext(r)
 
