@@ -9,7 +9,7 @@ import (
 	"github.com/gorilla/mux"
 	"google.golang.org/appengine"
 	"google.golang.org/appengine/log"
-  "google.golang.org/appengine/urlfetch"
+	"google.golang.org/appengine/urlfetch"
 )
 
 // initialize routing
@@ -55,7 +55,7 @@ func PostWebHookHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	log.Debugf(context, "Request body: %v", data)
-	
+
 	sendMessage(r, data)
 }
 
@@ -74,7 +74,7 @@ func sendMessage(r *http.Request, data PostRequestData) {
 	client := urlfetch.Client(context)
 	resp, err := client.Post("https://graph.facebook.com/v2.6/me/messages", "application/json", payload)
 
-  if err != nil {
+	if err != nil {
 		log.Errorf(context, "%v", err)
 	}
 
