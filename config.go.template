@@ -1,0 +1,4 @@
+package api
+
+var FB_WEBHOOK_VERIFY_TOKEN string = ""
+var FB_PAGE_TOKEN = ""
