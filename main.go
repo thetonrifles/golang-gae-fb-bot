@@ -67,6 +67,10 @@ func sendMessage(r *http.Request, data PostRequestData) {
 	response.Recipient.ID = data.Entry[0].Messaging[0].Sender.ID
 	response.Message.Text = data.Entry[0].Messaging[0].Message.Text
 
+	if response.Message.Text == "fantozzi" {
+		response.Message.Text = "merdaccia"
+	}
+
 	payload := new(bytes.Buffer)
 	json.NewEncoder(payload).Encode(response)
 
