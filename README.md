@@ -28,4 +28,3 @@ Follow these steps for configuring your local environment:
     ```sh
     goapp deploy
     ```
-    ```
